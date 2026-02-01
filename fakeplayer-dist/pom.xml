@@ -126,6 +126,12 @@
             <version>${revision}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.hello09x.fakeplayer</groupId>
+            <artifactId>fakeplayer-v1_21_11</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -226,6 +232,11 @@
                                     </fileset>
                                 </copy>
                                 <copy tofile="../server-1.21.10/plugins/fakeplayer.jar">
+                                    <fileset dir="${project.build.directory}">
+                                        <include name="fakeplayer-${revision}.jar"/>
+                                    </fileset>
+                                </copy>
+                                <copy tofile="../server-1.21.11/plugins/fakeplayer.jar">
                                     <fileset dir="${project.build.directory}">
                                         <include name="fakeplayer-${revision}.jar"/>
                                     </fileset>
